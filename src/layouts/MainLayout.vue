@@ -8,7 +8,7 @@
           color="accent"
         />
         <q-toolbar-title class="text-bold text-subtitle1 text-primary-2 q-px-md">
-          SoilCarbonMapper <span class="text-primary-6 text-weight-regular"> | demo app</span>
+          OpenLayers <span class="text-primary-6 text-weight-regular"> | demo app</span>
         </q-toolbar-title>
 
         <Geocoder :map="map" />
