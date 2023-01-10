@@ -11,7 +11,7 @@
 const { configure } = require('quasar/wrappers')
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
-const vueJsx = require('@vitejs/plugin-vue-jsx')
+// const vueJsx = require('@vitejs/plugin-vue-jsx')
 
 module.exports = configure(function (ctx) {
   const ssl = ctx.dev ? {
@@ -97,7 +97,7 @@ module.exports = configure(function (ctx) {
       //   [ 'package-name', { ..options.. } ]
       // ]
       vitePlugins: [
-        vueJsx()
+        // vueJsx()
       ]
     },
 
