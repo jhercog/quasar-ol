@@ -4,9 +4,7 @@
 
 <script>
 import VideoRecorder from 'ol-ext/control/VideoRecorder'
-import {
-  saveAs
-} from 'file-saver'
+import { saveAs } from 'file-saver'
 import useControl from 'vue3Ol/composables/useControl'
 import { toRefs } from 'vue'
 export default {

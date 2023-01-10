@@ -178,6 +178,7 @@ const headerHeight = ref(48)
 
 onMounted(() => {
   map.value = view.value.$refs.mapRef.map
+  console.log(map.value)
 })
 
 </script>
