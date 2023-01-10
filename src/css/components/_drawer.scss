@@ -1,0 +1,6 @@
+.q-drawer--left {
+  background: rgba(get-color($name: "primary", $index: 10), 0.3);
+  .q-btn {
+    padding: 0;
+  }
+}

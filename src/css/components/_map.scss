@@ -1,0 +1,86 @@
+#map-container {
+  align-self: stretch;
+  width: 100%;
+  // height: 100%;
+  font-family: inherit;
+  background: var(--q-primary-9);
+  .body--light & {
+    // background: $bg-footer-light;
+  }
+  .body--dark & {
+    // background: $bg-footer-dark;
+  }
+  .leaflet {
+    &-control-attribution {
+      display: flex;
+      background: transparent;
+      padding: 0.25rem 1rem;
+      a {
+        display: block;
+        font-size: 0.625rem;
+        // color: $primary;
+        line-height: 1;
+        margin: 0 0.25rem;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          // color: $accent;
+        }
+      }
+    }
+
+    &-popup {
+      &-content {
+        // color: $text-default-color-light;
+        .body--light & {
+          // color: $text-default-color-light;
+        }
+        .body--dark & {
+          // color: $text-default-color-dark;
+        }
+        &-wrapper {
+          // @extend .bg-footer;
+        }
+        &-title {
+          // @extend .b-table--cell--title;
+          margin-bottom: 0.5rem;
+        }
+        &-caption {
+          // @extend .b-table--cell--caption;
+          margin-top: 0;
+        }
+      }
+      &-tip {
+        // @extend .bg-footer;
+      }
+    }
+  }
+
+  .marker-icon,
+  .marker-icon:focus {
+    background-color: var(--q-primary-0);
+    border: 1px solid var(--q-primary);
+    border-radius: 50%;
+    margin: -0.3125rem 0 0 -0.3125rem !important;
+    width: 0.625rem !important;
+    height: 0.625rem !important;
+    outline: 0;
+    transition: opacity ease 0.3s;
+  }
+  .marker-icon-middle,
+  .marker-icon-middle:focus {
+    background-color: var(--q-primary-1);
+    border: 1px solid var(--q-primary);
+    border-radius: 50%;
+    margin: -0.25rem 0 0 -0.25rem !important;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+    outline: 0;
+    transition: opacity ease 0.3s;
+  }
+}

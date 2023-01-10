@@ -1,0 +1,23 @@
+.ol-control {
+  background: none;
+  padding: 0;
+  &.ol-swipe {
+    &::before {
+      width: 0px;
+    }
+  }
+  button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--q-primary);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      background: var(--q-primary-4);
+    }
+  }
+  &:hover {
+    background: none;
+  }
+}

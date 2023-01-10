@@ -1,0 +1,10 @@
+/dist
+/src-capacitor
+/src-cordova
+/.quasar
+/node_modules
+.eslintrc.js
+
+# Backup files
+*.bak
+*.bak.*

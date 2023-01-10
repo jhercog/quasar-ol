@@ -1,0 +1,57 @@
+.q-geocoder {
+  &.q-field--highlighted {
+    .q-field__control {
+      &::after {
+        border-color: currentColor;
+        border-width: 2px;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+  .q-field__control {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 28px;
+    // height: auto;
+    min-height: 0;
+    padding: 0 0.5rem 0 0.75rem;
+    &::before {
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(get-color("primary", 2), $alpha: 0.3);
+    }
+    &:hover::before {
+      border-color: rgba(get-color("primary", 2), $alpha: 0.5);
+    }
+    &::after {
+      inset: 0;
+      height: inherit;
+      background: none;
+      border-radius: inherit;
+      border: 2px solid transparent;
+      transition: border-color 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .q-field__native {
+      min-height: 0.875rem;
+      line-height: 0.875rem;
+      padding: 0.5rem 0;
+      .q-field__input {
+        color: var(--q-primary-2);
+        line-height: inherit;
+        min-height: inherit;
+      }
+    }
+  }
+  .q-field__marginal {
+    color: rgba(get-color("primary", 2), $alpha: 0.8);
+    height: auto;
+  }
+  .q-field__append {
+    padding-left: 12px;
+  }
+
+  &__popup {
+    color: rgba(get-color("primary", 2), $alpha: 0.8);
+    background: var(--q-primary-10);
+  }
+}
