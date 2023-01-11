@@ -12,13 +12,11 @@ export default {
   name: 'OlControlBar',
   props: {
     toggleOne: { type: Boolean, default: true },
-    group: { type: Boolean, default: true }
-
+    group: { type: Boolean, default: true },
+    className: { type: String, default: 'jh-control-bar' }
   },
   setup (props, context) {
-    const {
-      control
-    } = useControl(Bar, props, context)
+    const { control } = useControl(Bar, props, context)
 
     provide('controlBar', control)
     return {
@@ -27,7 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="">
-
-</style>

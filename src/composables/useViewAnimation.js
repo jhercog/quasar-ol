@@ -184,7 +184,6 @@ export const useViewAnimation = () => {
      * * {Number} maxZoom An optional maximal zoom level.
      */
     toExtent ({ view, extent, completionCallback, options }) {
-      console.log(options)
       // Set defaults if arguments are not provided.
       const duration = options.duration ?? 3000
       const maxZoom = options.maxZoom ?? Infinity

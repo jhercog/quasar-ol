@@ -1,15 +1,9 @@
-<template lang="">
-  <div v-if="false" />
-</template>
+<template />
 
 <script>
 import proj4 from 'proj4'
-import {
-  register
-} from 'ol/proj/proj4'
-import {
-  toRefs
-} from 'vue'
+import { register } from 'ol/proj/proj4'
+import { toRefs } from 'vue'
 import Projection from 'ol/proj/Projection'
 
 export default {
@@ -20,11 +14,7 @@ export default {
     projectionExtent: { type: Array, default: undefined }
   },
   setup (props) {
-    const {
-      projectionName,
-      projectionDef,
-      projectionExtent
-    } = toRefs(props)
+    const { projectionName, projectionDef, projectionExtent } = toRefs(props)
 
     proj4.defs(projectionName.value, projectionDef.value)
     register(proj4)
@@ -34,11 +24,7 @@ export default {
       extent: projectionExtent.value
     })
 
-    return {
-      projection
-    }
+    return { projection }
   }
 }
 </script>
-
-<style lang=""></style>

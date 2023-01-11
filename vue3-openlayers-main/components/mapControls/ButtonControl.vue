@@ -1,6 +1,4 @@
-<template lang="">
-  <div v-if="false" />
-</template>
+<template lang="" />
 
 <script>
 import Button from 'ol-ext/control/Button'
@@ -16,17 +14,9 @@ export default {
     handleClick: { type: Function, default: undefined }
   },
   setup (props, context) {
-    const {
-      control
-    } = useControl(Button, props, context)
+    const { control } = useControl(Button, props, context)
 
-    return {
-      control
-    }
+    return { control }
   }
 }
 </script>
-
-<style lang="">
-
-</style>

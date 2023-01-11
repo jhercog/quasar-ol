@@ -30,12 +30,11 @@ export default {
     tileKey: { type: String, default: undefined },
     transition: { type: Number, default: undefined },
     tileGrid: { type: Object, default: undefined }
+    // tileUrlFunction: { type: Function, default: undefined }
   },
   setup (props) {
     const layer = inject('tileLayer')
-    const {
-      properties
-    } = usePropsAsObjectProperties(props)
+    const { properties } = usePropsAsObjectProperties(props)
 
     const source = computed(() => new XYZ(properties))
 

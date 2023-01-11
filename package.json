@@ -2,7 +2,7 @@
   "name": "quasar-ol",
   "version": "0.0.1",
   "description": "Quasar OpenLayers Integration",
-  "productName": "SoilCarbonMapper",
+  "productName": "QuasarLayers",
   "author": "jhercog <jelenko.hercog@gmail.com>",
   "private": true,
   "scripts": {
@@ -20,7 +20,9 @@
     "@quasar/extras": "^1.15.9",
     "axios": "^1.2.2",
     "ol": "^7.2.2",
+    "ol-ext": "^4.0.4",
     "pinia": "^2.0.28",
+    "proj4": "^2.8.0",
     "quasar": "^2.11.3",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",

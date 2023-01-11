@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div v-if="false" />
 </template>
 
@@ -13,8 +13,14 @@ export default {
     className: { type: String, default: 'ol-zoom' },
     zoomInClassName: { type: String, default: 'ol-zoom-in' },
     zoomOutClassName: { type: String, default: 'ol-zoom-out' },
-    zoomInLabel: { type: String, default: '+' },
-    zoomOutLabel: { type: String, default: '-' },
+    zoomInLabel: {
+      type: [String, Function, HTMLElement],
+      default: () => document.createElement('i').classList.add('mdi', 'mdi-plus')
+    },
+    zoomOutLabel: {
+      type: [String, Function, HTMLElement],
+      default: () => document.createElement('i').classList.add('mdi', 'mdi-minus')
+    },
     zoomInTipLabel: { type: String, default: 'Zoom in' },
     zoomOutTipLabel: { type: String, default: 'Zoom Out' },
     delta: { type: Number, default: 1 },
@@ -22,16 +28,8 @@ export default {
 
   },
   setup (props, context) {
-    const {
-      control
-    } = useControl(Zoom, props, context)
-    return {
-      control
-    }
+    const { control } = useControl(Zoom, props, context)
+    return { control }
   }
 }
 </script>
-
-<style lang="">
-
-</style>

@@ -12,7 +12,7 @@ export default function useControl (ControlType, props, context) {
   const map = inject('map')
   const controlBar = inject('controlBar', null)
 
-  const parent = controlBar != null ? controlBar.value : map
+  const parent = controlBar !== null ? controlBar.value : map
 
   const { properties } = usePropsAsObjectProperties(props)
 

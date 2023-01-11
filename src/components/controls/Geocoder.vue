@@ -75,15 +75,14 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useAppStore } from 'stores'
 import { useGeocoder, useViewAnimation } from 'composables'
 import { toStringHDMS } from 'ol/coordinate'
 import { fromLonLat, getTransform } from 'ol/proj'
 import { applyTransform } from 'ol/extent'
 import { has } from 'lodash'
 
-const props = defineProps({
-  map: { type: Object, default: () => ({}) }
-})
+const map = computed(() => useAppStore().map)
 
 const { query } = useGeocoder({
   providerName: 'osm',
@@ -151,20 +150,20 @@ const onSelect = item => {
 
   // Position Map on result
   const result = item.value
-  const mapProjection = props.map.getView().getProjection()
+  const mapProjection = map.value.getView().getProjection()
   const coords = fromLonLat([result.lon, result.lat], mapProjection)
 
   if (has(result, 'boundingbox')) {
     const extent = applyTransform(result.boundingbox, getTransform('EPSG:4326', mapProjection))
     to({
       type: 'fly',
-      view: props.map.getView(),
+      view: map.value.getView(),
       destination: extent
     })
   } else {
     to({
       type: 'fly',
-      view: props.map.getView(),
+      view: map.value.getView(),
       destination: coords
     })
   }

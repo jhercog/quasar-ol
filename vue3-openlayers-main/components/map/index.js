@@ -1,4 +1,5 @@
-import Map from './Map.vue'
+// import Map from './Map.vue'
+import Map from './MapB.vue'
 import View from './View.vue'
 import Feature from './Feature.vue'
 import Overlay from './Overlay.vue'

@@ -7,6 +7,7 @@
     }
   }
   button {
+    color: var(--q-primary-1);
     width: 1.5rem;
     height: 1.5rem;
     background: var(--q-primary);
@@ -15,6 +16,10 @@
     cursor: pointer;
     &:hover {
       background: var(--q-primary-4);
+      color: white;
+    }
+    i {
+      font-size: 1.125rem;
     }
   }
   &:hover {

@@ -1,6 +1,7 @@
 import SourceXYZ from './SourceXYZ.vue'
 import SourceOSM from './SourceOSM.vue'
 import SourceImageStatic from './SourceImageStatic.vue'
+import SourceImage from './SourceImage.vue'
 import SourceWMTS from './SourceWMTS.vue'
 import SourceVector from './SourceVector.vue'
 import SourceCluster from './SourceCluster.vue'
@@ -18,6 +19,7 @@ function install (app) {
 
   app.component(SourceXYZ.name, SourceXYZ)
   app.component(SourceOSM.name, SourceOSM)
+  app.component(SourceImage.name, SourceImage)
   app.component(SourceImageStatic.name, SourceImageStatic)
   app.component(SourceWMTS.name, SourceWMTS)
   app.component(SourceVector.name, SourceVector)

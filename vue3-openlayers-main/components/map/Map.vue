@@ -1,18 +1,14 @@
-<template lang="">
-  <div :ref="el => mapRef = el">
+<template>
+  <div
+    :ref="el => mapRef = el"
+    class="map-container"
+  >
     <slot />
   </div>
 </template>
 
 <script>
-import {
-  ref,
-  provide,
-  onMounted,
-  onUnmounted,
-  watch
-} from 'vue'
-
+import { ref, provide, onMounted, onUnmounted, watch } from 'vue'
 import Map from 'ol/Map'
 import usePropsAsObjectProperties from 'vue3Ol/composables/usePropsAsObjectProperties'
 
@@ -26,12 +22,8 @@ export default {
     controls: { type: Array, default: () => ([]) }
   },
   emits: ['click', 'dblclick', 'singleclick', 'pointerdrag', 'pointermove', 'movestart', 'moveend', 'postrender', 'precompose', 'postcompose'],
-  setup (props, {
-    emit
-  }) {
-    const {
-      properties
-    } = usePropsAsObjectProperties(props)
+  setup (props, { emit }) {
+    const { properties } = usePropsAsObjectProperties(props)
 
     const mapRef = ref(null)
 
@@ -43,6 +35,7 @@ export default {
 
     onMounted(() => {
       map.setTarget(mapRef.value)
+      console.log(map)
     })
 
     onUnmounted(() => {
@@ -87,5 +80,3 @@ export default {
 
 }
 </script>
-
-<style lang=""></style>

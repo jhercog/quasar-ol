@@ -1,0 +1,117 @@
+.jh-control-bar {
+  width: 1.5rem;
+
+  &.ol-control.ol-bar.ol-group {
+    button {
+      margin: 0;
+    }
+  }
+  &.left {
+    display: flex;
+    flex-direction: column;
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: translateX(0);
+    &.ol-control.ol-bar.ol-group {
+      .ol-control {
+        &:first-child > button {
+          border-radius: 0.25rem 0.25rem 0 0;
+        }
+        &.ol-zoomslider {
+          border: 1px solid var(--q-primary);
+          border-radius: 0 0 0.25rem 0.25rem;
+          background-color: rgba(white, 0.3);
+          & > button {
+            border-radius: 0;
+            margin: 0;
+            width: 1.375rem;
+            height: 1rem;
+          }
+        }
+        &.ol-mapzone {
+          // position: absolute;
+          top: 0.25rem !important;
+          height: 1.5rem;
+          display: flex;
+          overflow: visible;
+          gap: 0.25rem;
+
+          button {
+            float: none;
+            display: block;
+            min-width: 1.5rem;
+            border-radius: 0.25rem;
+          }
+
+          & > div {
+            position: relative;
+            display: block;
+            width: 5rem;
+            min-width: 5rem;
+            height: 5rem;
+            margin: 0;
+            border-radius: 0.25rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            .ol-viewport {
+              border-radius: 0.25rem;
+              &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--q-primary-10);
+                opacity: 0;
+                transition: all 0.3s ease-out;
+              }
+            }
+            p {
+              font-family: "IBM Plex Sans";
+              font-size: 0.625rem;
+              line-height: 1;
+              letter-spacing: 0.5px;
+              width: 100%;
+              padding: 0.25rem 0;
+              background: var(--q-primary-10);
+              border-radius: 0 0 0.25rem 0.25rem;
+              transform: scaleX(1);
+              transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+              cursor: pointer;
+              .ol-viewport {
+                &::after {
+                  opacity: 0.1;
+                }
+              }
+              p {
+                background: var(--q-primary) !important;
+              }
+            }
+          }
+
+          &.ol-collapsed > div {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.bottom {
+    display: flex;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    top: auto;
+    transform: translateX(0);
+    &.ol-control.ol-bar.ol-group {
+      .ol-control {
+      }
+      .ol-scale-line {
+        position: static;
+        display: flex;
+        background: rgba(get-color(primary, 5), 0.5);
+        height: 1.5rem;
+      }
+    }
+  }
+}

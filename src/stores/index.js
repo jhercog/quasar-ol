@@ -1,5 +1,6 @@
 import { store } from 'quasar/wrappers'
 import { createPinia } from 'pinia'
+export { useAppStore } from './App'
 
 /*
  * If not building with SSR mode, you can
